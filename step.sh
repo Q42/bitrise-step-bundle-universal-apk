@@ -10,7 +10,7 @@ validateApkName(){
         apk_name="universal"
     fi
     apk_name="${apk_name//.apk}"
-} 
+}
 
 #=======================================
 # Main
@@ -27,7 +27,7 @@ echo "apk name ${apk_name}"
 
 bundletool="${temp_path}/bundletool.jar"
 keystore="${temp_path}/keystore.jks"
-source="https://github.com/google/bundletool/releases/download/0.8.0/bundletool-all-0.8.0.jar"
+source="https://github.com/google/bundletool/releases/download/0.15.0/bundletool-all-0.15.0.jar"
 
 # Building
 aab_output_path="${temp_path}/output/bundle"
@@ -40,7 +40,7 @@ mkdir -p "${apk_output_path}" &
 wait
 
 echo "Downloading keystore"
-curl -o "keystore.jks" "${keystore_url}" 
+curl -o "keystore.jks" "${keystore_url}"
 wait
 
 echo "Downloading bundle tool"
